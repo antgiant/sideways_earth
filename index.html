@@ -10,7 +10,6 @@
   <body>
     <script>
     var img;
-      var theta = 0;
       
       function preload() {
         img = loadImage('sideways%20earth.jpg');
@@ -23,15 +22,13 @@
       function draw() {
         background(255, 255, 255, 255);
       
-        rotateZ(theta * mouseX * 0.00001);
-        rotateX(theta * mouseX * 0.001);
-        rotateY(theta * mouseY * 0.001);
+        rotateZ(mouseX * 0.00001);
+        rotateX(mouseX * 0.001);
+        rotateY(mouseY * 0.001);
       
         //pass image as texture
         texture(img);
-        sphere(80);
-      
-        theta += 0.05;
+        sphere(200);
       }
       </script>
   </body>
